@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:onClick="focusParent"
+    android:focusable="true"
+    android:clickable="true"
+    android:background="@drawable/launch_bg"
+    tools:context=".Submit">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="64dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="backClick"
+        android:src="@drawable/ic_arrow_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="40dp"
+        android:src="@drawable/g_tag"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="@+id/imageView2">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/ShapeAppearance.MaterialComponents.LargeComponent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Google"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="Africa"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:textStyle="normal" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Developer Scholarship"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView2"
+        style="@style/ShapeAppearance.MaterialComponents.LargeComponent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Project Submision"
+        android:textColor="@color/aux_colorlite"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:src="@drawable/header_underline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="60dp"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:weightSum="2"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3">
+
+        <EditText
+            android:id="@+id/fName_EDT"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bg_edittext"
+            android:hint="First Name"
+            android:maxHeight="50dp"
+            android:focusableInTouchMode="true"
+            android:focusable="true"
+            style="@style/TextAppearance.AppCompat.Medium"
+            android:textStyle="bold"
+            />
+
+        <EditText
+            android:id="@+id/lName_EDt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_edittext"
+            android:hint="Last Name"
+            android:maxHeight="50dp"
+            android:focusableInTouchMode="true"
+            android:focusable="true"
+            style="@style/TextAppearance.AppCompat.Medium"
+            android:textStyle="bold"
+            />
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/email_EDT"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:maxHeight="50dp"
+        android:focusableInTouchMode="true"
+        android:focusable="true"
+        android:background="@drawable/bg_edittext"
+        android:hint="Email Address"
+        style="@style/TextAppearance.AppCompat.Medium"
+        android:textStyle="bold"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+    <EditText
+        android:id="@+id/git_link_EDT"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:maxHeight="50dp"
+        android:focusableInTouchMode="true"
+        android:focusable="true"
+        android:background="@drawable/bg_edittext"
+        android:hint="Project on GITHUB (Link)"
+        style="@style/TextAppearance.AppCompat.Medium"
+        android:textStyle="bold"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/email_EDT" />
+
+    <Button
+        android:id="@+id/subMitBTN"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="Submit"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="submit_projClick"
+        android:paddingStart="40dp"
+        android:paddingEnd="40dp"
+        android:textColor="@color/white"
+        android:background="@drawable/bg_button2"
+        android:textAllCaps="false"
+        style="@style/TextAppearance.AppCompat.Button"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/git_link_EDT"
+        app:layout_constraintStart_toStartOf="@+id/git_link_EDT"
+        app:layout_constraintTop_toBottomOf="@+id/git_link_EDT"
+        />
+
+    <ProgressBar
+        android:id="@+id/progressBar_circular"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:indeterminateDrawable="@drawable/bg_progressbar"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/subMitBTN"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/git_link_EDT"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
